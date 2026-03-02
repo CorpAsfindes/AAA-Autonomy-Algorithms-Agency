@@ -73,3 +73,46 @@ The codebase is designed to evolve into a scalable, open-source civic infrastruc
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git](https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git)
+
+
+---
+
+## 📊 Pilot Case Study: Medellín (Comunas 12 & 13)
+
+The following analysis was conducted with local Community Action Boards (JAC) to validate the AAA framework using our diagnostic engine.
+
+### 1. Barrio Cristóbal
+* **Status:** Stable but vulnerable.
+* **Key Finding:** While they have a strong organizational base (Autonomy), their **Agency (8.33)** is at risk due to a heavy reliance on commercial platforms for community coordination.
+* **Action:** Strengthen internal communication protocols to reduce algorithmic dependence.
+
+### 2. La Pradera
+* **Status:** Resilience Leader.
+* **Key Finding:** They exhibit the highest **Agency (10.0)** and **Autonomy (12.33)** scores. This organization serves as a benchmark for how local leadership can maintain control over its territory and information.
+
+### 3. Mirador de Calasanz
+* **Status:** High Risk.
+* **Key Finding:** With a **Composite Score of 8.56**, this organization shows critical alerts in both **Algorithms** and **Agency**. There is a high risk of "Passive Dependency," where digital tools dictate the community's pace rather than the other way around.
+* **Action:** Immediate intervention through digital sovereignty workshops and infrastructure migration.
+
+---
+
+### 🛠 Sample Diagnostic Output (JSON)
+The AAA engine generates structured data to ensure interoperability with other civic-tech tools. Below is an example of a high-risk flag detection:
+
+```json
+{
+    "org_id": "mirador_de_calasanz",
+    "analysis": {
+        "composite_score": 8.56,
+        "risk_level": "HIGH",
+        "active_alerts": [
+            "ALGORITHMIC_OPACITY",
+            "POLITICAL_DISENFRANCHISEMENT"
+        ],
+        "recommendations": [
+            "Deploy algorithmic literacy workshops and use privacy-focused tools like Signal.",
+            "Establish digital governance protocols to restore community decision-making power."
+        ]
+    }
+}

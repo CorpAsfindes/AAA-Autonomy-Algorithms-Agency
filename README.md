@@ -1,12 +1,12 @@
-# AAA-Autonomy-Algorithms-Agency
-"Digital sovereignty and diagnostic framework for grassroots communities. It analyzes the relationship between Autonomy, Algorithms, and Agency (AAA) within Global South territories."
 # AAA — Autonomy, Algorithms & Agency
+
+> "Digital sovereignty and diagnostic framework for grassroots communities. It analyzes the relationship between Autonomy, Algorithms, and Agency (AAA) within Global South territories."
 
 ## An AI-Assisted Civic Infrastructure for Strengthening Democratic Autonomy
 
 **AAA (Autonomy, Algorithms & Agency)** is an emerging civic-tech infrastructure designed to assess and strengthen the democratic autonomy of community-based organizations operating within algorithmically mediated environments.
 
-The project integrates structured data collection, indicator-based analysis, and AI-assisted diagnostics to support informed decision-making, collective agency, and digital resilience at the local level. Developed by **Corporación ASFINDES / Vita'e Plena** in Medellín, Colombia.
+The project integrates structured data collection, indicator-based analysis, and AI-assisted diagnostics to support informed decision-making, collective agency, and digital resilience at the level. Developed by **Corporación ASFINDES / Vita'e Plena** in Medellín, Colombia.
 
 ---
 
@@ -39,80 +39,17 @@ The practical ability of organizations to make informed decisions, coordinate co
 
 ---
 
-## Technical Overview
+## 🛠 System Architecture & Data Flow
 
-The current prototype includes:
-- **Structured Data Collection:** Via standardized organizational indicators.
-- **Data Ingestion:** CSV-based dataset processing.
-- **Metric Aggregation:** Statistical analysis of autonomy levels.
-- **AI-Assisted Diagnostics:** Automated report generation using Large Language Models (LLM) like Gemini 1.5 Flash.
-- **Governance Output:** Structured strategic recommendations for community leaders.
+This diagram illustrates how organizational metrics are transformed into strategic digital sovereignty diagnostics:
 
-The codebase is designed to evolve into a scalable, open-source civic infrastructure that remains cost-effective for grassroots organizations.
-
----
-
-## Prototype Status
-
-**Current development stage:**
-- Initial pilot dataset from community-based organizations (Medellín, Comunas 12 & 13).
-- Functional AI-assisted diagnostic module.
-- Automated report generation.
-- **Open-source repository under MIT License.**
-
-**Future development goals:**
-- Expanded dataset collection and multi-territory scalability.
-- Web-based interface integration for non-technical community leaders.
-- Enhanced AI analytical models for predictive democratic risk assessment.
-- Community toolkit deployment for digital sovereignty.
-
----
-
-## How to Run the Prototype
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git](https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git)
-
-
----
-
-## 📊 Pilot Case Study: Medellín (Comunas 12 & 13)
-
-The following analysis was conducted with local Community Action Boards (JAC) to validate the AAA framework using our diagnostic engine.
-
-### 1. Barrio Cristóbal
-* **Status:** Stable but vulnerable.
-* **Key Finding:** While they have a strong organizational base (Autonomy), their **Agency (8.33)** is at risk due to a heavy reliance on commercial platforms for community coordination.
-* **Action:** Strengthen internal communication protocols to reduce algorithmic dependence.
-
-### 2. La Pradera
-* **Status:** Resilience Leader.
-* **Key Finding:** They exhibit the highest **Agency (10.0)** and **Autonomy (12.33)** scores. This organization serves as a benchmark for how local leadership can maintain control over its territory and information.
-
-### 3. Mirador de Calasanz
-* **Status:** High Risk.
-* **Key Finding:** With a **Composite Score of 8.56**, this organization shows critical alerts in both **Algorithms** and **Agency**. There is a high risk of "Passive Dependency," where digital tools dictate the community's pace rather than the other way around.
-* **Action:** Immediate intervention through digital sovereignty workshops and infrastructure migration.
-
----
-
-### 🛠 Sample Diagnostic Output (JSON)
-The AAA engine generates structured data to ensure interoperability with other civic-tech tools. Below is an example of a high-risk flag detection:
-
-```json
-{
-    "org_id": "mirador_de_calasanz",
-    "analysis": {
-        "composite_score": 8.56,
-        "risk_level": "HIGH",
-        "active_alerts": [
-            "ALGORITHMIC_OPACITY",
-            "POLITICAL_DISENFRANCHISEMENT"
-        ],
-        "recommendations": [
-            "Deploy algorithmic literacy workshops and use privacy-focused tools like Signal.",
-            "Establish digital governance protocols to restore community decision-making power."
-        ]
-    }
-}
+```mermaid
+graph TD
+    A[Community Metrics CSV] --> B{AAA Diagnostic Engine}
+    B --> C[Metric Aggregation]
+    B --> D[Risk Flagging Logic]
+    D --> E[JSON Output]
+    E --> F[Actionable Recommendations]
+    E --> G[Comparative Index]
+    F --> H[Community Empowerment]
+    G --> H

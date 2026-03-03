@@ -11,51 +11,62 @@ This system integrates:
 - AI-assisted diagnostics.
 - Machine-readable JSON outputs.
 
-Developed by **Corporación ASFINDES / Vita'e Plena** in Medellín, Colombia.
+To support decision-making, collective agency, and governance resilience. Developed by **Corporación ASFINDES / Vita'e Plena** in Medellín, Colombia.
 
 ---
 
-## System Architecture
+## Why This Matters
 
-```mermaid
-graph TD
-    A[Data] --> B[Normalization]
-    B --> C[Analysis]
-    C --> D[AI Module]
-    D --> E[JSON Output]
-    E --> F[Reports]
+Community organizations increasingly operate within complex digital ecosystems shaped by algorithmic platforms. Most lack tools to:
+- Assess organizational autonomy.
+- Understand algorithmic exposure.
+- Generate structured governance diagnostics.
+
+**AAA** fills this gap by bridging civic data with AI-assisted analytical capacity.
+
+---
+
+## System Architecture (Data Pipeline)
+
+```text
+[ Data CSV ] --> [ Normalization ] --> [ Risk Analysis ]
+                                             |
+                                             v
+[ Reports ] <--- [ JSON Output ] <--- [ AI Diagnostic ]
 Prototype Capabilities
-Ingesting organizational metrics CSV files.
+Data Ingestion: Processing organizational metrics from CSV files.
 
-Normalizing data and calculating composite indices.
+Normalization: Calculating composite indices for comparison.
 
-Classifying structural risks via rules.
+Risk Classification: Automated flagging of structural governance risks.
 
-Generating multi-dimensional governance diagnostics.
+AI Diagnostics: Generating strategic recommendations per organization.
 
-Providing strategic recommendations per organization.
-
-Producing JSON outputs suitable for integration.
+Interoperability: Producing JSON outputs for future platforms.
 
 How to Run the Prototype
-Clone: git clone https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git
+Clone the repository:
+git clone https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git
 
-Install: pip install -r requirements.txt
+Install dependencies:
+pip install -r requirements.txt
 
-Run: python sistema_aaa.py
+Run the engine:
+python sistema_aaa.py
 
-Tests: pytest tests/
+Run tests:
+pytest tests/
 
 Repository Structure
-/data: Raw pilot datasets.
+/data: Raw pilot datasets from Medellín's JACs.
 
-/examples: Sample CSV and JSON.
+/examples: Sample CSV inputs and JSON outputs.
 
-/tests: Automated test suite.
+/tests: Automated test suite for logic verification.
 
-sistema_aaa.py: Core logic.
+sistema_aaa.py: Core diagnostic logic.
 
-requirements.txt: Dependencies.
+requirements.txt: Dependency list.
 
 License
 This project is licensed under the MIT License.

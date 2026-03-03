@@ -46,6 +46,8 @@ Organizational capability for informed decision-making and collective action.
 
 AAA operates through the following pipeline:
 
+### Data Flow
+
 ```mermaid
 graph TD
     A[1. Data Collection - CSV] --> B[2. Metric Normalization]

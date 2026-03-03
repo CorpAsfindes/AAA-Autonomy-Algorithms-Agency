@@ -44,7 +44,7 @@ Organizational capability for informed decision-making and collective action.
 
 ## System Architecture
 
-AAA operates through the following pipeline:
+The following pipeline describes the internal logic of the AAA engine:
 
 ```mermaid
 graph TD
@@ -71,7 +71,7 @@ Producing JSON outputs suitable for integration in future platforms.
 How to Run the Prototype
 1. Clone the repository
 Bash
-git clone https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git
+git clone [https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git](https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git)
 cd AAA-Autonomy-Algorithms-Agency
 2. Install dependencies
 Bash

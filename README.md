@@ -1,55 +1,56 @@
+Markdown
 # AAA — Autonomy, Algorithms & Agency
 
-> "Digital sovereignty and diagnostic framework for grassroots communities. It analyzes the relationship between Autonomy, Algorithms, and Agency (AAA) within Global South territories."
+> **Digital sovereignty and diagnostic framework for grassroots communities. It analyzes the relationship between Autonomy, Algorithms, and Agency (AAA) within Global South territories.**
 
-## An AI-Assisted Civic Infrastructure for Strengthening Democratic Autonomy
+## What the Project Does
+AAA is a civic-tech diagnostic engine designed to evaluate how community organizations (such as Medellín's Community Action Boards - JAC) interact with and are influenced by algorithmic systems. It provides structured insights into their digital independence and decision-making power.
 
-**AAA (Autonomy, Algorithms & Agency)** is an emerging civic-tech infrastructure designed to assess and strengthen the democratic autonomy of community-based organizations operating within algorithmically mediated environments.
+## Why It Matters (Civic + AI + Democracy)
+In the age of AI, democratic resilience depends on the autonomy of local organizations. AAA bridges the gap between complex algorithmic governance and grassroots leadership, ensuring that technology serves community agency rather than undermining it.
 
-The project integrates structured data collection, indicator-based analysis, and AI-assisted diagnostics to support informed decision-making, collective agency, and digital resilience at the level. Developed by **Corporación ASFINDES / Vita'e Plena** in Medellín, Colombia.
+## Tech Overview & Architecture
+The system is built on a Python-based diagnostic core that processes organizational metrics to generate risk-aware governance reports and automated recommendations.
 
----
-
-## Why This Matters
-
-Community organizations increasingly operate within digital ecosystems shaped by algorithms — from social media platforms to information systems and AI tools.
-
-However, most civic groups lack:
-- Structured diagnostic tools.
-- Algorithmic literacy frameworks.
-- AI-assisted decision support systems.
-- Data-informed autonomy assessment mechanisms.
-
-**AAA** addresses this gap by combining civic data collection with AI-powered analytical capabilities to generate structured governance diagnostics and strategic recommendations.
-
----
-
-## Core Framework
-
-AAA is structured around three critical dimensions:
-
-### 1. Autonomy
-The structural capacity of community organizations to operate independently in strategic, informational, and organizational terms. It measures infrastructure ownership vs. "data tenancy."
-
-### 2. Algorithms
-Recognition that contemporary democratic processes are influenced by algorithmic systems, digital platforms, and AI infrastructures. It focuses on logical transparency and critical literacy.
-
-### 3. Agency
-The practical ability of organizations to make informed decisions, coordinate collective action, and exert democratic influence over their own digital and physical territories.
-
----
-
-## 🛠 System Architecture & Data Flow
-
-This diagram illustrates how organizational metrics are transformed into strategic digital sovereignty diagnostics:
-
+### Data Flow
 ```mermaid
 graph TD
-    A[Community Metrics CSV] --> B{AAA Diagnostic Engine}
+    A[Community Metrics CSV] --> B{AAA Engine}
     B --> C[Metric Aggregation]
-    B --> D[Risk Flagging Logic]
-    D --> E[JSON Output]
-    E --> F[Actionable Recommendations]
-    E --> G[Comparative Index]
-    F --> H[Community Empowerment]
-    G --> H
+    B --> D[Risk Flagging]
+    D --> E[JSON Diagnostics]
+    E --> F[Strategic Action]
+    F --> G[Community Empowerment]
+How to Run the Prototype
+Clone the repo:
+
+Bash
+git clone [https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git](https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git)
+Install dependencies:
+
+Bash
+pip install -r requirements.txt
+Run the engine:
+
+Bash
+python sistema_aaa.py
+How to Run Tests
+We use pytest to ensure diagnostic integrity, data consistency, and mathematical accuracy:
+
+Bash
+pytest tests/
+Repository Structure
+/data: Raw pilot datasets from Medellín's JACs.
+
+/examples: Sample CSV inputs (sample_input.csv) and JSON outputs (sample_output.json) for interoperability testing.
+
+/tests: Automated test suite (test_diagnostics.py) for logic verification and diagnostic accuracy.
+
+sistema_aaa.py: Core diagnostic logic and AI-assisted recommendation engine.
+
+requirements.txt: List of necessary Python libraries for reproduction.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Developed by Corporación ASFINDES / Vita'e Plena - Medellín, Colombia.

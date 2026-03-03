@@ -1,4 +1,4 @@
-Markdown
+[README.md](https://github.com/user-attachments/files/25699890/README.md)
 # AAA — Autonomy, Algorithms & Agency
 
 ## AI-Assisted Civic Infrastructure for Strengthening Democratic Autonomy
@@ -32,42 +32,56 @@ graph TD
     C --> D[AI Module]
     D --> E[JSON Output]
     E --> F[Report Generation]
-Prototype Capabilities
-Data Ingestion: Processing organizational metrics from CSV files.
+```
 
-Normalization: Calculating composite indices for comparison.
+---
 
-Risk Classification: Automated flagging of structural governance risks.
+## Prototype Capabilities
 
-AI Diagnostics: Generating strategic recommendations per organization.
+- **Data Ingestion:** Processing organizational metrics from CSV files.
+- **Normalization:** Calculating composite indices for comparison.
+- **Risk Classification:** Automated flagging of structural governance risks.
+- **AI Diagnostics:** Generating strategic recommendations per organization.
+- **Interoperability:** Producing JSON outputs for future platforms.
 
-Interoperability: Producing JSON outputs for future platforms.
+---
 
-How to Run the Prototype
-Clone the repository:
+## How to Run the Prototype
+
+**Clone the repository:**
+```bash
 git clone https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git
+```
 
-Install dependencies:
+**Install dependencies:**
+```bash
 pip install -r requirements.txt
+```
 
-Run the engine:
+**Run the engine:**
+```bash
 python sistema_aaa.py
+```
 
-Run tests:
+**Run tests:**
+```bash
 pytest tests/
+```
 
-Repository Structure
-/data: Raw pilot datasets from Medellín's JACs.
+---
 
-/examples: Sample CSV inputs and JSON outputs.
+## Repository Structure
 
-/tests: Automated test suite for logic verification.
+- `/data` — Raw pilot datasets from Medellín's JACs.
+- `/examples` — Sample CSV inputs and JSON outputs.
+- `/tests` — Automated test suite for logic verification.
+- `sistema_aaa.py` — Core diagnostic logic.
+- `requirements.txt` — Dependency list.
 
-sistema_aaa.py: Core diagnostic logic.
+---
 
-requirements.txt: Dependency list.
+## License
 
-License
 This project is licensed under the MIT License.
 
-Developed by Corporación ASFINDES / Vita'e Plena - Medellín, Colombia.
+Developed by **Corporación ASFINDES / Vita'e Plena** — Medellín, Colombia.

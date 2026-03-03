@@ -46,8 +46,6 @@ Organizational capability for informed decision-making and collective action.
 
 AAA operates through the following pipeline:
 
-### Data Flow
-
 ```mermaid
 graph TD
     A[1. Data Collection - CSV] --> B[2. Metric Normalization]
@@ -55,6 +53,8 @@ graph TD
     C --> D[4. AI Diagnostic Module]
     D --> E[5. Structured JSON Output]
     E --> F[6. Report Generation]
+Prototype Capabilities
+The current prototype is capable of:
 
 Ingesting organizational metrics CSV files.
 
@@ -71,7 +71,7 @@ Producing JSON outputs suitable for integration in future platforms.
 How to Run the Prototype
 1. Clone the repository
 Bash
-git clone [https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git](https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git)
+git clone https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git
 cd AAA-Autonomy-Algorithms-Agency
 2. Install dependencies
 Bash

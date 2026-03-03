@@ -1,69 +1,146 @@
-[README.md](https://github.com/user-attachments/files/25699890/README.md)
+[README.md](https://github.com/user-attachments/files/25699979/README.md)
 # AAA — Autonomy, Algorithms & Agency
 
-## AI-Assisted Civic Infrastructure for Strengthening Democratic Autonomy
+### AI-Assisted Civic Infrastructure for Strengthening Democratic Autonomy
 
-**AAA (Autonomy, Algorithms & Agency)** is a hybrid civic-tech infrastructure prototype designed to assess and strengthen the democratic autonomy of community-based organizations.
+**AAA** is an open-source diagnostic engine that measures and strengthens **digital sovereignty** in grassroots community organizations. It combines structured survey data, automated processing, and AI-generated recommendations to help communities understand and improve their relationship with digital technologies.
 
-This system integrates:
-- Structured data collection.
-- Rule-based classification.
-- AI-assisted diagnostics.
-- Machine-readable JSON outputs.
-
-To support decision-making, collective agency, and governance resilience. Developed by **Corporación ASFINDES / Vita'e Plena** in Medellín, Colombia.
+Developed by **Corporación ASFINDES / Vita'e Plena** — Medellín, Colombia.  
+Piloted with Juntas de Acción Comunal (JACs) in Comunas 12 and 13.
 
 ---
 
-## Why This Matters
+## The AAA Index
 
-Community organizations increasingly operate within complex digital ecosystems shaped by algorithmic platforms. **AAA** fills this gap by bridging civic data with AI-assisted analytical capacity.
+The system measures digital sovereignty across three dimensions:
+
+| Dimension | What it measures |
+|-----------|-----------------|
+| **Autonomy** | Independence from extractive platforms; ownership of tools and data |
+| **Algorithms** | Critical understanding of how algorithmic systems shape community decisions |
+| **Agency** | Capacity to use technology as a tool for genuine civic participation |
+
+Each organization receives a composite score per dimension (scale 0–20). The AI engine identifies the weakest dimension and generates 3 concrete, context-specific recommendations.
 
 ---
 
 ## System Architecture
 
-The following pipeline describes the internal logic of the AAA engine:
-
 ```mermaid
 graph TD
-    A[Data Collection] --> B[Normalization]
-    B --> C[Risk Analysis]
-    C --> D[AI Module]
-    D --> E[JSON Output]
-    E --> F[Report Generation]
+    A[Google Forms Survey] --> B[CSV Export]
+    B --> C[Data Normalization]
+    C --> D[AAA Index Calculation]
+    D --> E[Risk Classification]
+    E --> F[Gemini AI Diagnostic]
+    F --> G[JSON Output]
+    G --> H[PDF / DOCX Report]
 ```
 
 ---
 
-## Prototype Capabilities
+## Example: Input & Output
 
-- **Data Ingestion:** Processing organizational metrics from CSV files.
-- **Normalization:** Calculating composite indices for comparison.
-- **Risk Classification:** Automated flagging of structural governance risks.
-- **AI Diagnostics:** Generating strategic recommendations per organization.
-- **Interoperability:** Producing JSON outputs for future platforms.
+### Input CSV (excerpt)
+
+```csv
+Nombre de la organización,Autonomía_AAA,Algoritmo_AAA,Agencia_AAA
+Junta de Acción Comunal Barrio Cristobal,11.67,9.0,8.33
+Junta de Acción Comunal La Pradera,12.33,10.67,10.0
+Junta de Acción Comunal Mirador de Calasanz,9.33,11.33,7.67
+```
+
+### AI Diagnostic Output (excerpt)
+
+```
+📍 ORGANIZATION: Junta de Acción Comunal Mirador de Calasanz
+📊 METRICS: Autonomy: 9.33 | Algorithm: 11.33 | Agency: 7.67
+
+⚠️  LOWEST DIMENSION: Agency (7.67)
+
+DIAGNOSIS: The JAC has technological knowledge (Algorithm: 11.33) but
+community members lack sufficient capacity for incidence and active
+participation in controlling these tools.
+
+RECOMMENDATIONS:
+1. Implement Critical Digital Literacy Workshops — train the community
+   not just to "use" apps, but to understand how data and privacy work.
+2. Migrate to Open Source Tools — adopt Nextcloud (files) and Signal
+   (communication) to eliminate algorithmic black boxes.
+3. Create a Community Data Governance Protocol — formally define who
+   collects data in the neighborhood, how, and for what purpose.
+```
+
+### JSON Output
+
+```json
+{
+  "organization": "Junta de Acción Comunal Mirador de Calasanz",
+  "scores": {
+    "autonomy": 9.33,
+    "algorithm": 11.33,
+    "agency": 7.67
+  },
+  "lowest_dimension": "agency",
+  "risk_level": "high",
+  "recommendations": [
+    "Implement Critical Digital Literacy Workshops",
+    "Migrate to Open Source Tools (Nextcloud, Signal)",
+    "Create a Community Data Governance Protocol"
+  ]
+}
+```
 
 ---
 
-## How to Run the Prototype
+## How to Reproduce
 
-**Clone the repository:**
+### Requirements
+
+- Python 3.9+
+- A Google Gemini API key ([get one here](https://aistudio.google.com/))
+
+### 1. Clone the repository
+
 ```bash
 git clone https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git
+cd AAA-Autonomy-Algorithms-Agency
 ```
 
-**Install dependencies:**
+### 2. Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-**Run the engine:**
+### 3. Configure your API key
+
+Set your Gemini API key as an environment variable — **never hardcode it in the script**:
+
+```bash
+export GOOGLE_API_KEY="your_api_key_here"
+```
+
+Or in Google Colab, use Secrets (Settings → Secrets → `GOOGLE_API_KEY`).
+
+### 4. Add your data
+
+Place your CSV file in `/data/`. It must include these columns:
+
+```
+Nombre de la organización | Autonomía_AAA | Algoritmo_AAA | Agencia_AAA
+```
+
+### 5. Run the engine
+
 ```bash
 python sistema_aaa.py
 ```
 
-**Run tests:**
+The engine will process each organization, call the Gemini API, and generate a diagnostic report in `/output/`.
+
+### 6. Run tests
+
 ```bash
 pytest tests/
 ```
@@ -72,16 +149,69 @@ pytest tests/
 
 ## Repository Structure
 
-- `/data` — Raw pilot datasets from Medellín's JACs.
-- `/examples` — Sample CSV inputs and JSON outputs.
-- `/tests` — Automated test suite for logic verification.
-- `sistema_aaa.py` — Core diagnostic logic.
-- `requirements.txt` — Dependency list.
+```
+AAA-Autonomy-Algorithms-Agency/
+│
+├── data/                   # Raw pilot datasets from Medellín JACs
+├── examples/               # Sample CSV inputs and JSON outputs
+├── output/                 # Generated diagnostic reports
+├── tests/                  # Automated test suite
+│
+├── sistema_aaa.py          # Core diagnostic engine
+├── requirements.txt        # Python dependencies
+└── README.md
+```
+
+---
+
+## Tech Stack
+
+| Component | Tool |
+|-----------|------|
+| Data collection | Google Forms |
+| Processing | Python (pandas) |
+| Visualization | Looker Studio |
+| AI diagnostics | Google Gemini API (`gemini-2.0-flash`) |
+| Output | JSON / PDF / DOCX |
+
+---
+
+## Pilot Results — Medellín 2026
+
+Three JACs participated in the initial pilot (Comunas 12 & 13):
+
+| Organization | Autonomy | Algorithm | Agency | Weakest |
+|---|---|---|---|---|
+| JAC Barrio Cristobal | 11.67 | 9.00 | 8.33 | Agency |
+| JAC La Pradera | 12.33 | 10.67 | 10.00 | Agency |
+| JAC Mirador de Calasanz | 9.33 | 11.33 | 7.67 | Agency |
+
+**Key finding:** All three organizations showed Agency as their weakest dimension — indicating that communities have some digital tools and awareness, but lack the capacity to use technology as a genuine instrument of civic power.
+
+---
+
+## Roadmap
+
+- [x] Core diagnostic engine (Python + Gemini API)
+- [x] Pilot with 3 JACs in Medellín
+- [ ] Full open-source release (GitHub)
+- [ ] Scale to 20+ JACs across Medellín
+- [ ] Multilingual support (Spanish / English)
+- [ ] Web interface for non-technical facilitators
+- [ ] Federated deployment guide for other cities
+
+---
+
+## Contributing
+
+Contributions are welcome. Please open an issue before submitting a pull request.
+
+This project is part of the **Mozilla Foundation Democracy × AI Cohort 2026** application.
 
 ---
 
 ## License
 
-This project is licensed under the MIT License.
+MIT License — see [LICENSE](LICENSE) for details.
 
 Developed by **Corporación ASFINDES / Vita'e Plena** — Medellín, Colombia.

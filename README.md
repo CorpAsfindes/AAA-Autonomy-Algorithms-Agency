@@ -1,4 +1,3 @@
-Markdown
 # AAA — Autonomy, Algorithms & Agency
 
 ## AI-Assisted Civic Infrastructure for Strengthening Democratic Autonomy
@@ -67,20 +66,15 @@ Generating multi-dimensional governance diagnostics.
 Providing strategic recommendations per organization.
 
 Producing JSON outputs suitable for integration in future platforms.
-
 How to Run the Prototype
 1. Clone the repository
-Bash
 git clone https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git
 cd AAA-Autonomy-Algorithms-Agency
 2. Install dependencies
-Bash
 pip install -r requirements.txt
 3. Run the engine
-Bash
 python sistema_aaa.py
 4. Run tests
-Bash
 pytest tests/
 Repository Structure
 /data: Raw pilot datasets from Medellín's JACs.

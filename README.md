@@ -53,8 +53,6 @@ graph TD
     C --> D[4. AI Diagnostic Module]
     D --> E[5. Structured JSON Output]
     E --> F[6. Report Generation]
-Prototype Capabilities
-The current prototype is capable of:
 
 Ingesting organizational metrics CSV files.
 

@@ -17,22 +17,21 @@ To support decision-making, collective agency, and governance resilience. Develo
 
 ## Why This Matters
 
-Community organizations increasingly operate within complex digital ecosystems shaped by algorithmic platforms. Most lack tools to:
-- Assess organizational autonomy.
-- Understand algorithmic exposure.
-- Generate structured governance diagnostics.
-
-**AAA** fills this gap by bridging civic data with AI-assisted analytical capacity.
+Community organizations increasingly operate within complex digital ecosystems shaped by algorithmic platforms. **AAA** fills this gap by bridging civic data with AI-assisted analytical capacity.
 
 ---
 
-## System Architecture (Data Pipeline)
+## System Architecture
 
-```text
-[ Data CSV ] --> [ Normalization ] --> [ Risk Analysis ]
-                                             |
-                                             v
-[ Reports ] <--- [ JSON Output ] <--- [ AI Diagnostic ]
+The following pipeline describes the internal logic of the AAA engine:
+
+```mermaid
+graph TD
+    A[Data Collection] --> B[Normalization]
+    B --> C[Risk Analysis]
+    C --> D[AI Module]
+    D --> E[JSON Output]
+    E --> F[Report Generation]
 Prototype Capabilities
 Data Ingestion: Processing organizational metrics from CSV files.
 

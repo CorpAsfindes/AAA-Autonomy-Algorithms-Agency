@@ -1,54 +1,58 @@
-AAA — Autonomy, Algorithms & Agency
-AI-Assisted Civic Infrastructure for Strengthening Democratic Autonomy
-AAA (Autonomy, Algorithms & Agency) is a hybrid civic-tech infrastructure prototype designed to assess and strengthen the democratic autonomy of community-based organizations operating within algorithmically mediated environments.
+Markdown
+# AAA — Autonomy, Algorithms & Agency
+
+## AI-Assisted Civic Infrastructure for Strengthening Democratic Autonomy
+
+**AAA (Autonomy, Algorithms & Agency)** is a hybrid civic-tech infrastructure prototype designed to assess and strengthen the democratic autonomy of community-based organizations operating within algorithmically mediated environments.
 
 This system integrates:
+- Structured data collection.
+- Rule-based classification.
+- AI-assisted diagnostics.
+- Machine-readable JSON outputs.
 
-Structured data collection.
+To support decision-making, collective agency, and governance resilience. Developed by **Corporación ASFINDES / Vita'e Plena** in Medellín, Colombia.
 
-Rule-based classification.
+---
 
-AI-assisted diagnostics.
+## Why This Matters
 
-Machine-readable JSON outputs.
-
-To support decision-making, collective agency, and governance resilience. Developed by Corporación ASFINDES / Vita'e Plena in Medellín, Colombia.
-
-Why This Matters
 Community organizations increasingly operate within complex digital ecosystems shaped by algorithmic platforms and information flows. However, most lack tools to:
+- Assess organizational autonomy.
+- Understand algorithmic exposure.
+- Generate structured governance diagnostics.
+- Prioritize strategic actions.
 
-Assess organizational autonomy.
+**AAA** fills this gap by bridging civic data with AI-assisted analytical capacity.
 
-Understand algorithmic exposure.
+---
 
-Generate structured governance diagnostics.
+## Core Framework
 
-Prioritize strategic actions.
-
-AAA fills this gap by bridging civic data with AI-assisted analytical capacity.
-
-Core Framework
 The project is structured around three dimensions:
 
-1. Autonomy
+### 1. Autonomy  
 Capacity of an organization to operate independently, strategically, and sustainably.
 
-2. Algorithms
+### 2. Algorithms  
 Recognition that algorithmic systems influence civic processes, participation, and information environments.
 
-3. Agency
+### 3. Agency  
 Organizational capability for informed decision-making and collective action.
 
-System Architecture
+---
+
+## System Architecture
+
 The following pipeline describes the internal logic of the AAA engine:
 
-Fragmento de código
+```mermaid
 graph TD
-    A[Data Collection] --> B[Metric Normalization]
-    B --> C[Rule Based Analysis]
-    C --> D[AI Diagnostic Module]
-    D --> E[Structured JSON Output]
-    E --> F[Report Generation]
+    A[Data Collection] --> B[Normalization]
+    B --> C[Risk Analysis]
+    C --> D[AI Module]
+    D --> E[JSON Output]
+    E --> F[Reports]
 Prototype Capabilities
 The current prototype is capable of:
 
@@ -65,17 +69,16 @@ Providing strategic recommendations per organization.
 Producing JSON outputs suitable for integration in future platforms.
 
 How to Run the Prototype
-1. Clone the repository
+Clone the repository:
 git clone https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git
-cd AAA-Autonomy-Algorithms-Agency
 
-2. Install dependencies
+Install dependencies:
 pip install -r requirements.txt
 
-3. Run the engine
+Run the engine:
 python sistema_aaa.py
 
-4. Run tests
+Run tests:
 pytest tests/
 
 Repository Structure

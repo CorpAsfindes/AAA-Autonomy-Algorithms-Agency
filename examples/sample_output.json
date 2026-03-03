@@ -1,0 +1,49 @@
+[
+    {
+        "org_id": "barrio_cristobal",
+        "name": "Barrio Cristobal",
+        "metrics": {
+            "autonomy": 11.67,
+            "algorithms": 9.0,
+            "agency": 8.33
+        },
+        "analysis": {
+            "composite_score": 9.67,
+            "risk_level": "MEDIUM",
+            "active_alerts": [
+                "POLITICAL_DISENFRANCHISEMENT"
+            ]
+        }
+    },
+    {
+        "org_id": "la_pradera",
+        "name": "La Pradera",
+        "metrics": {
+            "autonomy": 12.33,
+            "algorithms": 9.0,
+            "agency": 10.0
+        },
+        "analysis": {
+            "composite_score": 10.44,
+            "risk_level": "LOW",
+            "active_alerts": []
+        }
+    },
+    {
+        "org_id": "mirador_de_calasanz",
+        "name": "Mirador de Calasanz",
+        "metrics": {
+            "autonomy": 9.67,
+            "algorithms": 8.33,
+            "agency": 7.67
+        },
+        "analysis": {
+            "composite_score": 8.56,
+            "risk_level": "HIGH",
+            "active_alerts": [
+                "ALGORITHMIC_OPACITY",
+                "POLITICAL_DISENFRANCHISEMENT"
+            ]
+        }
+    }
+]

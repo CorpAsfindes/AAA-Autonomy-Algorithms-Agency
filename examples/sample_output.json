@@ -1,49 +1,38 @@
 [
-    {
-        "org_id": "barrio_cristobal",
-        "name": "Barrio Cristobal",
-        "metrics": {
-            "autonomy": 11.67,
-            "algorithms": 9.0,
-            "agency": 8.33
-        },
-        "analysis": {
-            "composite_score": 9.67,
-            "risk_level": "MEDIUM",
-            "active_alerts": [
-                "POLITICAL_DISENFRANCHISEMENT"
-            ]
-        }
+  {
+    "organization": "JAC Barrio Cristobal",
+    "scores": {
+      "autonomy": 11.67,
+      "algorithm": 9.0,
+      "agency": 8.33
     },
-    {
-        "org_id": "la_pradera",
-        "name": "La Pradera",
-        "metrics": {
-            "autonomy": 12.33,
-            "algorithms": 9.0,
-            "agency": 10.0
-        },
-        "analysis": {
-            "composite_score": 10.44,
-            "risk_level": "LOW",
-            "active_alerts": []
-        }
+    "lowest_dimension": "Agency",
+    "risk_level": "medium",
+    "risk_flags": ["low_agency"],
+    "diagnostic": "The JAC has some digital tools and infrastructure (Autonomy: 11.67) but community members lack the capacity to use technology as a genuine instrument of civic power. Agency, the weakest dimension, reflects a passive relationship with digital platforms rather than an active one.\n\n1. Implement a Community Decision-Making Platform: Deploy Decidim or Loomio to enable structured digital voting and deliberation on community projects.\n\n2. Migrate Communications to Signal: Replace WhatsApp groups with Signal for strategic communications, reducing corporate data extraction and increasing digital autonomy.\n\n3. Run Critical Algorithm Literacy Workshops: Train community members to understand how social media algorithms filter their content and design intentional communication strategies."
+  },
+  {
+    "organization": "JAC La Pradera",
+    "scores": {
+      "autonomy": 12.33,
+      "algorithm": 10.67,
+      "agency": 10.0
     },
-    {
-        "org_id": "mirador_de_calasanz",
-        "name": "Mirador de Calasanz",
-        "metrics": {
-            "autonomy": 9.67,
-            "algorithms": 8.33,
-            "agency": 7.67
-        },
-        "analysis": {
-            "composite_score": 8.56,
-            "risk_level": "HIGH",
-            "active_alerts": [
-                "ALGORITHMIC_OPACITY",
-                "POLITICAL_DISENFRANCHISEMENT"
-            ]
-        }
-    }
+    "lowest_dimension": "Agency",
+    "risk_level": "low",
+    "risk_flags": [],
+    "diagnostic": "JAC La Pradera shows the strongest overall profile of the pilot, with relatively balanced scores across all three dimensions. Agency remains the weakest dimension, suggesting that while the organization has tools and some algorithmic awareness, collective digital action is still underdeveloped.\n\n1. Deploy Nextcloud for Community Data Sovereignty: Migrate documents, meeting records, and community data from Google Drive to a self-hosted Nextcloud instance.\n\n2. Create an Open Data Repository: Begin mapping neighborhood infrastructure using OpenStreetMap to generate community-owned geospatial data for advocacy.\n\n3. Establish a Digital Governance Protocol: Formally document who accesses community data, for what purpose, and how it is stored and deleted."
+  },
+  {
+    "organization": "JAC Mirador de Calasanz",
+    "scores": {
+      "autonomy": 9.33,
+      "algorithm": 11.33,
+      "agency": 7.67
+    },
+    "lowest_dimension": "Agency",
+    "risk_level": "medium",
+    "risk_flags": ["low_agency"],
+    "diagnostic": "JAC Mirador de Calasanz has the strongest algorithmic understanding of the three organizations but the lowest agency score, indicating a gap between knowing how digital systems work and being able to act on that knowledge collectively.\n\n1. Implement Participatory Budgeting Tools: Use Consul or a simplified Decidim instance to enable residents to propose and vote on community projects digitally.\n\n2. Adopt Privacy-Preserving Communication Tools: Transition internal leadership communications to Element (Matrix protocol), which allows federated self-hosting for full digital sovereignty.\n\n3. Develop a Community Digital Rights Charter: Create a formal document defining the community's rights over their digital data, co-authored with residents in a participatory workshop."
+  }
 ]

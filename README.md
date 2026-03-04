@@ -125,11 +125,24 @@ Or in Google Colab, use Secrets (Settings → Secrets → `GOOGLE_API_KEY`).
 
 ### 4. Add your data
 
-Place your CSV file in `/data/`. It must include these columns:
+Place your CSV file in `/data/`. The file must meet these requirements:
 
-```
-Nombre de la organización | Autonomía_AAA | Algoritmo_AAA | Agencia_AAA
-```
+**Required columns:**
+
+| Column | Type | Description |
+|--------|------|-------------|
+| `Organizacion` | string | Full name of the community organization |
+| `Autonomia_AAA` | float (0–20) | Score measuring independence from extractive platforms |
+| `Algoritmo_AAA` | float (0–20) | Score measuring understanding of algorithmic systems |
+| `Agencia_AAA` | float (0–20) | Score measuring capacity for civic action |
+
+**Rules:**
+- Scores must be numeric values between 0 and 20
+- Each row represents one survey response
+- Multiple rows per organization are averaged automatically
+- Column names are case-sensitive — use exactly as shown above
+
+See `data/sample_input.csv` for a working example.
 
 ### 5. Run the engine
 

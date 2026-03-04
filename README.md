@@ -134,7 +134,7 @@ Nombre de la organización | Autonomía_AAA | Algoritmo_AAA | Agencia_AAA
 ### 5. Run the engine
 
 ```bash
-python sistema_aaa.py
+python src/main.py
 ```
 
 The engine will process each organization, call the Gemini API, and generate a diagnostic report in `/output/`.
@@ -156,8 +156,11 @@ AAA-Autonomy-Algorithms-Agency/
 ├── examples/               # Sample CSV inputs and JSON outputs
 ├── output/                 # Generated diagnostic reports
 ├── tests/                  # Automated test suite
-│
-├── sistema_aaa.py          # Core diagnostic engine
+│├── src/                    # Modular diagnostic engine
+│   ├── data_loader.py
+│   ├── metrics.py
+│   ├── ai_module.py
+│   └── main.py
 ├── requirements.txt        # Python dependencies
 └── README.md
 ```

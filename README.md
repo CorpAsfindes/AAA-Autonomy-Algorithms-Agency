@@ -1,12 +1,19 @@
-[README.md](https://github.com/user-attachments/files/25699979/README.md)
+[README.md](https://github.com/user-attachments/files/25747172/README.md)
 # AAA — Autonomy, Algorithms & Agency
-
-### AI-Assisted Civic Infrastructure for Strengthening Democratic Autonomy
+## An Open Civic Infrastructure for Algorithmic Sovereignty
 
 **AAA** is an open-source diagnostic engine that measures and strengthens **digital sovereignty** in grassroots community organizations. It combines structured survey data, automated processing, and AI-generated recommendations to help communities understand and improve their relationship with digital technologies.
 
-Developed by **Corporación ASFINDES / Vita'e Plena** — Medellín, Colombia.  
+Developed by **Corporación ASFINDES / Vita'e Plena** — Medellín, Colombia.
 Piloted with Juntas de Acción Comunal (JACs) in Comunas 12 and 13.
+
+---
+
+## Why AAA Matters
+
+Communities increasingly depend on opaque algorithmic systems without the capacity to measure their autonomy, understand algorithmic influence, or exercise civic agency over digital tools. Platform monopolies extract data and shape information flows while community organizations lack any structured way to assess or respond to this asymmetry.
+
+AAA introduces a measurable framework to diagnose and strengthen democratic sovereignty at the community level. It is not just a diagnostic tool — it is civic infrastructure: a replicable, open system that transforms abstract concepts of digital rights into concrete, actionable metrics that communities can own and act upon.
 
 ---
 
@@ -21,6 +28,14 @@ The system measures digital sovereignty across three dimensions:
 | **Agency** | Capacity to use technology as a tool for genuine civic participation |
 
 Each organization receives a composite score per dimension (scale 0–20). The AI engine identifies the weakest dimension and generates 3 concrete, context-specific recommendations.
+
+---
+
+## Governance Model
+
+The AAA dimensions are not arbitrary scores. Each dimension is grounded in established frameworks of digital rights, platform accountability, and civic technology theory. Autonomy measures structural independence from extractive platforms. Algorithm measures critical awareness of how computational systems shape community decisions. Agency measures the capacity to translate digital tools into collective civic action.
+
+Scores are calculated as aggregated averages across survey responses per organization, enabling longitudinal tracking and cross-community comparison. The model is designed to be transparent, reproducible, and adaptable to different territorial contexts.
 
 ---
 
@@ -44,16 +59,16 @@ graph TD
 ### Input CSV (excerpt)
 
 ```csv
-Nombre de la organización,Autonomía_AAA,Algoritmo_AAA,Agencia_AAA
-Junta de Acción Comunal Barrio Cristobal,11.67,9.0,8.33
-Junta de Acción Comunal La Pradera,12.33,10.67,10.0
-Junta de Acción Comunal Mirador de Calasanz,9.33,11.33,7.67
+Organizacion,Autonomia_AAA,Algoritmo_AAA,Agencia_AAA
+JAC Barrio Cristobal,11.67,9.0,8.33
+JAC La Pradera,12.33,10.67,10.0
+JAC Mirador de Calasanz,9.33,11.33,7.67
 ```
 
 ### AI Diagnostic Output (excerpt)
 
 ```
-📍 ORGANIZATION: Junta de Acción Comunal Mirador de Calasanz
+📍 ORGANIZATION: JAC Mirador de Calasanz
 📊 METRICS: Autonomy: 9.33 | Algorithm: 11.33 | Agency: 7.67
 
 ⚠️  LOWEST DIMENSION: Agency (7.67)
@@ -75,14 +90,15 @@ RECOMMENDATIONS:
 
 ```json
 {
-  "organization": "Junta de Acción Comunal Mirador de Calasanz",
+  "organization": "JAC Mirador de Calasanz",
   "scores": {
     "autonomy": 9.33,
     "algorithm": 11.33,
     "agency": 7.67
   },
-  "lowest_dimension": "agency",
-  "risk_level": "high",
+  "lowest_dimension": "Agency",
+  "risk_level": "medium",
+  "risk_flags": ["low_agency"],
   "recommendations": [
     "Implement Critical Digital Literacy Workshops",
     "Migrate to Open Source Tools (Nextcloud, Signal)",
@@ -168,12 +184,14 @@ AAA-Autonomy-Algorithms-Agency/
 ├── data/                   # Raw pilot datasets from Medellín JACs
 ├── examples/               # Sample CSV inputs and JSON outputs
 ├── output/                 # Generated diagnostic reports
-├── tests/                  # Automated test suite
-│├── src/                    # Modular diagnostic engine
+├── src/                    # Modular diagnostic engine
+│   ├── __init__.py
 │   ├── data_loader.py
 │   ├── metrics.py
 │   ├── ai_module.py
 │   └── main.py
+├── tests/                  # Automated test suite
+├── conftest.py             # Pytest path configuration
 ├── requirements.txt        # Python dependencies
 └── README.md
 ```
@@ -215,6 +233,7 @@ Three JACs participated in the initial pilot (Comunas 12 & 13):
 - [ ] Multilingual support (Spanish / English)
 - [ ] Web interface for non-technical facilitators
 - [ ] Federated deployment guide for other cities
+- [ ] Development of a federated, community-owned diagnostic model aligned with open governance standards
 
 ---
 

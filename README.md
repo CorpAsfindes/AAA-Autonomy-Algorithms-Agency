@@ -219,6 +219,15 @@ Three JACs participated in the initial pilot (Comunas 12 & 13):
 | JAC Barrio Cristobal | 11.67 | 9.00 | 8.33 | Agency |
 | JAC La Pradera | 12.33 | 10.67 | 10.00 | Agency |
 | JAC Mirador de Calasanz | 9.33 | 11.33 | 7.67 | Agency |
+## Field Validation — Medellín 2026
+
+This system has been validated through field sessions with community
+leaders in Medellín (March 2026). Facilitators from Juntas de Acción
+Comunal in Comunas 12 and 13 participated in structured workshops using
+the AAA diagnostic instrument, providing qualitative feedback that
+informed the current version of the index and its risk classification
+model. Validation instruments and session guides are available in the
+`/docs` folder.
 
 **Key finding:** All three organizations showed Agency as their weakest dimension — indicating that communities have some digital tools and awareness, but lack the capacity to use technology as a genuine instrument of civic power.
 

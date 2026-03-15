@@ -233,14 +233,29 @@ model. Validation instruments and session guides are available in the
 
 ---
 
-## Roadmap
+## Roadmap — From Pilot to Scale
+
+The current AAA system (submitted March 16) represents a **Validated Functional Prototype**. We have demonstrated that the algorithm can diagnose community needs and that leaders can interpret and act on the results.
+
+If selected as finalists (full proposal due April 15), development will focus on four advanced pillars:
+
+| Pillar | Description |
+|--------|-------------|
+| **Civic Report Automation** | Move from manual data processing to an automated pipeline that generates PDF reports directly from the system, ready for community distribution |
+| **Civic AI Dashboard** | A visual interface for ASFINDES to monitor the digital health of multiple neighborhoods in real time, identifying regional vulnerabilities across Medellín |
+| **Algorithmic Transparency Module** | A "Human-Readable Code" layer allowing community leaders to audit why the AI assigned a specific score — ensuring full transparency and accountability |
+| **Digital Sovereignty Curriculum** | Expand the 3 pilot workshop modules into a comprehensive Digital Sovereignty Program for community leaders across the city |
 
 - [x] Core diagnostic engine (Python + Gemini API)
 - [x] Pilot with 3 JACs in Medellín
-- [ ] Full open-source release (GitHub)
+- [x] Full open-source release (GitHub)
+- [x] Field validation with JAC Barrio Cristobal (March 2026)
+- [ ] Civic report automation (PDF pipeline)
+- [ ] Civic AI Dashboard for regional monitoring
+- [ ] Algorithmic transparency module
 - [ ] Scale to 20+ JACs across Medellín
+- [ ] Digital Sovereignty Curriculum (city-wide)
 - [ ] Multilingual support (Spanish / English)
-- [ ] Web interface for non-technical facilitators
 - [ ] Federated deployment guide for other cities
 - [ ] Development of a federated, community-owned diagnostic model aligned with open governance standards
 

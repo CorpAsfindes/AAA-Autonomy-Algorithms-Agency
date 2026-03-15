@@ -1,4 +1,3 @@
-[README.md](https://github.com/user-attachments/files/25747172/README.md)
 # AAA — Autonomy, Algorithms & Agency
 ## An Open Civic Infrastructure for Algorithmic Sovereignty
 
@@ -182,7 +181,13 @@ pytest tests/
 AAA-Autonomy-Algorithms-Agency/
 │
 ├── data/                   # Raw pilot datasets from Medellín JACs
+├── docs/                   # Field validation instruments and methodology guides
+├── evidence/               # Field session evidence and signed instruments
 ├── examples/               # Sample CSV inputs and JSON outputs
+├── methodology/            # Workshop guides per AAA dimension
+│   ├── autonomy/
+│   ├── algorithm/
+│   └── agency/
 ├── output/                 # Generated diagnostic reports
 ├── src/                    # Modular diagnostic engine
 │   ├── __init__.py
@@ -219,17 +224,14 @@ Three JACs participated in the initial pilot (Comunas 12 & 13):
 | JAC Barrio Cristobal | 11.67 | 9.00 | 8.33 | Agency |
 | JAC La Pradera | 12.33 | 10.67 | 10.00 | Agency |
 | JAC Mirador de Calasanz | 9.33 | 11.33 | 7.67 | Agency |
-## Field Validation — Medellín 2026
-
-This system has been validated through field sessions with community
-leaders in Medellín (March 2026). Facilitators from Juntas de Acción
-Comunal in Comunas 12 and 13 participated in structured workshops using
-the AAA diagnostic instrument, providing qualitative feedback that
-informed the current version of the index and its risk classification
-model. Validation instruments and session guides are available in the
-`/docs` folder.
 
 **Key finding:** All three organizations showed Agency as their weakest dimension — indicating that communities have some digital tools and awareness, but lack the capacity to use technology as a genuine instrument of civic power.
+
+---
+
+## Field Validation — Medellín 2026
+
+This system has been validated through field sessions with community leaders in Medellín (March 2026). Facilitators from Juntas de Acción Comunal in Comunas 12 and 13 participated in structured workshops using the AAA diagnostic instrument, providing qualitative feedback that informed the current version of the index and its risk classification model. Validation instruments and session guides are available in the `/docs` folder.
 
 ---
 

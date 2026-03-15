@@ -9,7 +9,6 @@ This folder contains the field evidence collected during AAA validation sessions
 | Attendance lists | PDF / scan | Official attendance signed by participants and facilitator |
 | Validation instruments | PDF / scan | Signed Field Validation Instruments with qualitative observations |
 | Session minutes | PDF / DOCX | Formal meeting minutes (acta de reunion) |
-| Photo documentation | JPG / PNG | Photos of leaders with diagnostic cards (with consent) |
 
 ## Note on Language
 
@@ -20,7 +19,7 @@ All field evidence is collected in Spanish. This is an intentional methodologica
 ## Privacy and Consent
 
 - Participants sign the Field Validation Instrument authorizing use of their feedback.
-- Photo documentation is taken only with explicit verbal consent.
+- Photo documentation will be collected in subsequent sessions with explicit verbal consent.
 - Communities retain the right to access, review, and request removal of their data at any time.
 
 ## Status

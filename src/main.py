@@ -36,4 +36,4 @@ def run_pipeline(input_path: str, delay: float = 2.0):
     print(f"\nResults saved to {output_path}")
 
 if __name__ == "__main__":
-    run_pipeline("data/sample_input.csv")
+    run_pipeline("data/AAA_datos_piloto_Medellin_2026.csv")

@@ -237,7 +237,7 @@ This system has been validated through field sessions with community leaders in 
 
 ## Roadmap — From Pilot to Scale
 
-The current AAA system (submitted March 16) represents a **Validated Functional Prototype**. We have demonstrated that the algorithm can diagnose community needs and that leaders can interpret and act on the results.
+The AAA system (submitted March 16, 2026) is a **Validated Functional System** with real community data, field-tested methodology, and open-source infrastructure. We have demonstrated that the algorithm can diagnose community needs and that leaders can interpret and act on the results.
 
 If selected as finalists (full proposal due April 15), development will focus on four advanced pillars:
 
@@ -247,19 +247,9 @@ If selected as finalists (full proposal due April 15), development will focus on
 | **Civic AI Dashboard** | A visual interface for ASFINDES to monitor the digital health of multiple neighborhoods in real time, identifying regional vulnerabilities across Medellín |
 | **Algorithmic Transparency Module** | A "Human-Readable Code" layer allowing community leaders to audit why the AI assigned a specific score — ensuring full transparency and accountability |
 | **Digital Sovereignty Curriculum** | Expand the 3 pilot workshop modules into a comprehensive Digital Sovereignty Program for community leaders across the city |
-**Toward Local AI Sovereignty:** The current engine runs on Google Gemini API.
-A key long-term objective is migrating to Small Language Models (SLMs) that
-can run locally or on ASFINDES-owned servers — eliminating dependency on
-external AI providers and achieving full data sovereignty at the infrastructure level.
-```
 
-Quedará así en el Roadmap:
-```
-tabla de pilares
-↓
-Toward Local AI Sovereignty...
-↓
-checklist [ ] [ ] ...
+**Toward Local AI Sovereignty:** The current engine runs on Google Gemini API. A key long-term objective is migrating to Small Language Models (SLMs) that can run locally or on ASFINDES-owned servers — eliminating dependency on external AI providers and achieving full data sovereignty at the infrastructure level.
+
 - [x] Core diagnostic engine (Python + Gemini API)
 - [x] Pilot with 3 JACs in Medellín
 - [x] Full open-source release (GitHub)
@@ -271,6 +261,7 @@ checklist [ ] [ ] ...
 - [ ] Digital Sovereignty Curriculum (city-wide)
 - [ ] Multilingual support (Spanish / English)
 - [ ] Federated deployment guide for other cities
+- [ ] Migration to locally-hosted Small Language Models (SLMs)
 - [ ] Development of a federated, community-owned diagnostic model aligned with open governance standards
 
 ---

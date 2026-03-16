@@ -39,7 +39,6 @@ Scores are calculated as aggregated averages across survey responses per organiz
 ---
 
 ## System Architecture
-
 ```mermaid
 graph TD
     A[Google Forms Survey] --> B[CSV Export]
@@ -56,7 +55,6 @@ graph TD
 ## Example: Input & Output
 
 ### Input CSV (excerpt)
-
 ```csv
 Organizacion,Autonomia_AAA,Algoritmo_AAA,Agencia_AAA
 JAC Barrio Cristobal,11.67,9.0,8.33
@@ -65,7 +63,6 @@ JAC Mirador de Calasanz,9.33,11.33,7.67
 ```
 
 ### AI Diagnostic Output (excerpt)
-
 ```
 📍 ORGANIZATION: JAC Mirador de Calasanz
 📊 METRICS: Autonomy: 9.33 | Algorithm: 11.33 | Agency: 7.67
@@ -86,7 +83,6 @@ RECOMMENDATIONS:
 ```
 
 ### JSON Output
-
 ```json
 {
   "organization": "JAC Mirador de Calasanz",
@@ -116,14 +112,12 @@ RECOMMENDATIONS:
 - A Google Gemini API key ([get one here](https://aistudio.google.com/))
 
 ### 1. Clone the repository
-
 ```bash
 git clone https://github.com/CorpAsfindes/AAA-Autonomy-Algorithms-Agency.git
 cd AAA-Autonomy-Algorithms-Agency
 ```
 
 ### 2. Install dependencies
-
 ```bash
 pip install -r requirements.txt
 ```
@@ -132,8 +126,14 @@ pip install -r requirements.txt
 
 Set your Gemini API key as an environment variable — **never hardcode it in the script**:
 
+**On Linux / Mac:**
 ```bash
 export GOOGLE_API_KEY="your_api_key_here"
+```
+
+**On Windows (cmd):**
+```cmd
+set GOOGLE_API_KEY=your_api_key_here
 ```
 
 Or in Google Colab, use Secrets (Settings → Secrets → `GOOGLE_API_KEY`).
@@ -160,15 +160,13 @@ Place your CSV file in `/data/`. The file must meet these requirements:
 See `data/sample_input.csv` for a working example.
 
 ### 5. Run the engine
-
 ```bash
 python src/main.py
 ```
 
-The engine will process each organization, call the Gemini API, and generate a diagnostic report in `/output/`.
+The engine will process each organization, call the Gemini API, and generate a diagnostic report in `/salida/`.
 
 ### 6. Run tests
-
 ```bash
 pytest tests/
 ```
@@ -176,7 +174,6 @@ pytest tests/
 ---
 
 ## Repository Structure
-
 ```
 AAA-Autonomy-Algorithms-Agency/
 │
@@ -188,7 +185,7 @@ AAA-Autonomy-Algorithms-Agency/
 │   ├── autonomy/
 │   ├── algorithm/
 │   └── agency/
-├── output/                 # Generated diagnostic reports
+├── salida/                 # Generated diagnostic reports
 ├── src/                    # Modular diagnostic engine
 │   ├── __init__.py
 │   ├── data_loader.py

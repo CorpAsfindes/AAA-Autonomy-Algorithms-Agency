@@ -38,7 +38,7 @@ def run_pipeline(input_path: str, delay: float = 2.0):
         if i < len(metrics_list) - 1:
             time.sleep(delay)
 
-    output_path = "output/results.json"
+    output_path = "salida/results.json"
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 

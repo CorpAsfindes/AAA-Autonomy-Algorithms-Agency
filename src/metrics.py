@@ -2,8 +2,7 @@ from dataclasses import dataclass, field
 from typing import List
 import pandas as pd
 
-THRESHOLDS = {"Autonomia_AAA": 8.0, "Algoritmo_AAA": 8.0, "Agencia_AAA": 8.0}
-
+THRESHOLDS = {"Autonomía_AAA": 8.0, "Algoritmo_AAA": 8.0, "Agencia_AAA": 8.0}
 
 @dataclass
 class AAAMetrics:
@@ -38,18 +37,17 @@ class AAAMetrics:
             "risk_flags": self.risk_flags,
         }
 
-
 def calculate_aaa_metrics(df: pd.DataFrame):
-    grouped = df.groupby("Organizacion").mean(numeric_only=True)
+    grouped = df.groupby("Nombre de la organización").mean(numeric_only=True)
     result = []
     for org, row in grouped.iterrows():
         flags = []
         if row["Agencia_AAA"] < THRESHOLDS["Agencia_AAA"]: flags.append("low_agency")
-        if row["Autonomia_AAA"] < THRESHOLDS["Autonomia_AAA"]: flags.append("low_autonomy")
+        if row["Autonomía_AAA"] < THRESHOLDS["Autonomía_AAA"]: flags.append("low_autonomy")
         if row["Algoritmo_AAA"] < THRESHOLDS["Algoritmo_AAA"]: flags.append("low_algorithm")
         result.append(AAAMetrics(
             organization=org,
-            autonomy=round(float(row["Autonomia_AAA"]), 2),
+            autonomy=round(float(row["Autonomía_AAA"]), 2),
             algorithm=round(float(row["Algoritmo_AAA"]), 2),
             agency=round(float(row["Agencia_AAA"]), 2),
             risk_flags=flags,

@@ -1,4 +1,4 @@
-data_loader.py que descargaste — o copia esto:
+
 import pandas as pd
 
 REQUIRED_COLUMNS = ["Organizacion", "Autonomia_AAA", "Algoritmo_AAA", "Agencia_AAA"]

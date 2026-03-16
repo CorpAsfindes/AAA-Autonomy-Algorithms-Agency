@@ -1,7 +1,7 @@
 # AAA — Autonomy, Algorithms & Agency
 ## An Open Civic Infrastructure for Algorithmic Sovereignty
 
-**AAA** is an open-source diagnostic engine that measures and strengthens **digital sovereignty** in grassroots community organizations. It combines structured survey data, automated processing, and AI-generated recommendations to help communities understand and improve their relationship with digital technologies.
+**AAA** is an open-source diagnostic engine that measures and strengthens **digital sovereignty** in grassroots community organizations. Built on principles of civic empowerment and open source transparency, it combines structured survey data, automated processing, and AI-generated recommendations to help communities understand and improve their relationship with digital technologies.
 
 Developed by **Corporación ASFINDES / Vita'e Plena** — Medellín, Colombia.
 Piloted with Juntas de Acción Comunal (JACs) in Comunas 12 and 13.

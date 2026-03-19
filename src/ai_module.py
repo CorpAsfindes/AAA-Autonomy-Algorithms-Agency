@@ -4,7 +4,6 @@ import requests
 
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
 
-
 def _build_prompt(m):
     return (
         "You are a Digital Sovereignty expert.\n"
@@ -21,7 +20,6 @@ def _build_prompt(m):
         "Be specific, practical, and use open-source tools where possible."
     )
 
-
 def generate_diagnostic(metrics, retries=3):
     api_key = os.getenv("GOOGLE_API_KEY")
     if not api_key:
@@ -34,9 +32,11 @@ def generate_diagnostic(metrics, retries=3):
         try:
             r = requests.post(url, json=payload, timeout=30)
             if r.status_code == 200:
-                return r.json()["candidates"][0]["content"]["parts"][0]["text"]
+                result = r.json()["candidates"][0]["content"]["parts"][0]["text"]
+                time.sleep(30)
+                return result
             elif r.status_code == 429:
-                wait = 30 * (attempt + 1)
+                wait = 60 * (attempt + 1)
                 print("Rate limit. Waiting " + str(wait) + "s...")
                 time.sleep(wait)
             else:

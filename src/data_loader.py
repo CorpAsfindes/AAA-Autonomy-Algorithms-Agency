@@ -18,7 +18,7 @@ def load_data(path: str) -> pd.DataFrame:
     except FileNotFoundError:
         raise FileNotFoundError(f"Input file not found: {path}")
     df.columns = df.columns.str.strip().str.replace("\xa0", " ")
-    str_cols = df.select_dtypes(include="object").columns
+    str_cols = df.select_dtypes(include="str").columns
     df[str_cols] = df[str_cols].apply(lambda col: col.str.strip())
     missing = [col for col in REQUIRED_COLUMNS if col not in df.columns]
     if missing:

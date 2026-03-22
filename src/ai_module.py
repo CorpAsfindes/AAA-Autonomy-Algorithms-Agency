@@ -32,9 +32,7 @@ def generate_diagnostic(metrics, retries=3):
         try:
             r = requests.post(url, json=payload, timeout=30)
             if r.status_code == 200:
-                result = r.json()["candidates"][0]["content"]["parts"][0]["text"]
-                time.sleep(30)
-                return result
+                return r.json()["candidates"][0]["content"]["parts"][0]["text"]
             elif r.status_code == 429:
                 wait = 60 * (attempt + 1)
                 print("Rate limit. Waiting " + str(wait) + "s...")

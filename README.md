@@ -56,7 +56,7 @@ graph TD
 
 ### Input CSV (excerpt)
 ```csv
-Organizacion,Autonomia_AAA,Algoritmo_AAA,Agencia_AAA
+Nombre de la organización,Autonomía_AAA,Algoritmo_AAA,Agencia_AAA
 JAC Barrio Cristobal,11.67,9.0,8.33
 JAC La Pradera,12.33,10.67,10.0
 JAC Mirador de Calasanz,9.33,11.33,7.67
@@ -146,8 +146,8 @@ Place your CSV file in `/data/`. The file must meet these requirements:
 
 | Column | Type | Description |
 |--------|------|-------------|
-| `Organizacion` | string | Full name of the community organization |
-| `Autonomia_AAA` | float (0–20) | Score measuring independence from extractive platforms |
+| `Nombre de la organización` | string | Full name of the community organization |
+| `Autonomía_AAA` | float (0–20) | Score measuring independence from extractive platforms |
 | `Algoritmo_AAA` | float (0–20) | Score measuring understanding of algorithmic systems |
 | `Agencia_AAA` | float (0–20) | Score measuring capacity for civic action |
 
@@ -164,7 +164,7 @@ See `data/sample_input.csv` for a working example.
 python src/main.py
 ```
 
-The engine will process each organization, call the Gemini API, and generate a diagnostic report in `/salida/`.
+The engine will process each organization, call the Gemini API, and generate a diagnostic report in `output/results.json`.
 
 ### 6. Run tests
 ```bash
@@ -185,7 +185,7 @@ AAA-Autonomy-Algorithms-Agency/
 │   ├── autonomy/
 │   ├── algorithm/
 │   └── agency/
-├── salida/                 # Generated diagnostic reports
+├── output/                 # Generated diagnostic reports
 ├── src/                    # Modular diagnostic engine
 │   ├── __init__.py
 │   ├── data_loader.py
